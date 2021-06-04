@@ -1,0 +1,384 @@
+:root {
+     --main-color1: #142954;
+     --main-color2: #1D3679;
+     --secondary-color1: #FBB03B;
+     --secondary-color2: #FCD62B;
+     --bg-color: #F9FBFF;
+     --light-color: #ffffff;
+     --dark-color: #13263D;
+     --gradient-color1: linear-gradient(180.91deg, #142954 12.33%, #1D3679 92.5%);
+     --gradient-color2: linear-gradient(93.8deg, #FCD62B 13.53%, #FBB03B 98%);
+     --box-shadow1: 2px 5px 10px rgba(189, 189, 189, 0.5);
+}
+
+body {
+     font-family: 'roboto', 'sans-serif';
+     background: var(--bg-color);
+}
+
+/* UTILITIES */
+/* button */
+.btn-1 {
+     background: var(--gradient-color2);
+     color: var(--dark-color);
+}
+
+.btn-1:hover {
+     color: var(--dark-color);
+     background: var(--light-color);
+}
+
+.btn-2 {
+     background: var(--gradient-color1);
+     color: var(--light-color);
+}
+
+.btn-2:hover {
+     background: var(--gradient-color2);
+     color: var(--dark-color);
+}
+
+.btn-3 {
+     background: var(--light-color);
+     color: var(--main-color1);
+     border: 1px solid var(--main-color1);
+}
+
+.btn-3:hover {
+     color: var(--secondary-color1);
+     border: 1px solid var(--secondary-color1);
+}
+
+.btn-4 {
+     background: var(--gradient-color2);
+     color: var(--dark-color);
+}
+
+.btn-4:hover {
+     background: var(--gradient-color1);
+     color: var(--light-color);
+}
+
+/* badge */
+.badge-1 {
+     background: var(--gradient-color2);
+     color: var(--dark-color);
+     padding: 6px 15px;
+}
+
+.badge-1:hover {
+     background: var(--gradient-color1);
+     color: var(--light-color);
+}
+
+/* tables */
+table thead {
+     background: var(--gradient-color2);
+     color: var(--dark-color);
+}
+
+.table-responsive {
+     padding-bottom: 10px;
+}
+
+/* pagination */
+.page-link {
+     color: #807770;
+}
+
+.page-link:hover {
+     color: var(--main-color2);
+}
+
+.page-item.active .page-link {
+     background-color: var(--secondary-color1);
+     border-color: var(--secondary-color1);
+}
+
+/* ckeditor */
+.ck-content {
+     min-height: 250px;
+}
+
+/* HEADER */
+
+header {
+     position: fixed;
+     z-index: 99;
+     background: var(--light-color);
+     padding: 15px;
+     width: 100%;
+     top: 0;
+     box-shadow: 0px 0px 15px #d8d8d87a;
+}
+
+
+header .logout {
+     float: right;
+     text-decoration: none;
+     margin-right: 20px;
+     background: var(--gradient-color2);
+     color: var(--dark-color);
+     cursor: pointer;
+     padding: 5px 10px;
+     border-radius: 5px;
+}
+
+header .logout:hover {
+     background: var(--gradient-color1);
+     color: var(--light-color);
+}
+
+header label #sidebar_btn {
+     color: var(--main-color1);
+     position: relative;
+     z-index: 999;
+     cursor: pointer;
+     left: 23px;
+     font-size: 25px;
+     transition: 0.5s;
+     padding: 0px;
+     margin-top: 4px;
+}
+
+/* HUMBERGER MENU */
+
+#check:checked~aside {
+     left: -265px;
+}
+
+#check:checked~header label #sidebar_btn {
+     left: 20px;
+}
+
+#check:checked~aside .social-link {
+     left: -265px;
+     box-shadow: none;
+}
+
+#check:checked~main {
+     margin-left: 0px;
+}
+
+#check:checked~footer {
+     margin-left: 0px;
+}
+
+/* SIDEBAR MENU */
+
+aside {
+     position: fixed;
+     z-index: 999;
+     width: 265px;
+     height: 100%;
+     overflow-y: auto;
+     overflow-x: hidden;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     background: var(--main-color1);
+     transition: 0.5s;
+}
+
+/* aside scrollbar */
+
+/* width */
+aside::-webkit-scrollbar {
+     width: 8px;
+}
+
+/* Track */
+aside::-webkit-scrollbar-track {
+     background: linear-gradient(180.91deg, var(--main-color1) 12.33%, var(--main-color2) 92.5%);
+}
+
+/* Handle */
+aside::-webkit-scrollbar-thumb {
+     background: rgba(255, 255, 255, 0.281);
+     visibility: hidden;
+     border-radius: 4px;
+}
+
+/* Handle on hover */
+aside::-webkit-scrollbar-thumb:hover {
+     visibility: visible;
+}
+
+/* end aside scrollbar */
+
+aside .header {
+     padding: 21px 30px;
+     position: absolute;
+     width: 100%;
+     box-shadow: 0px 0px 15px #ffffff11;
+}
+
+aside label i {
+     color: rgba(255, 255, 255, 0.452);
+     font-size: 20px;
+     position: absolute;
+     right: 20px;
+     top: 23px;
+}
+
+aside .header a {
+     font-size: 20px;
+     font-weight: 600;
+     color: var(--light-color);
+     text-decoration: none;
+}
+
+aside .header a:hover {
+     color: var(--secondary-color1);
+}
+
+/* FOTO profil */
+
+aside .profil-photo {
+     width: 103px;
+     height: 103px;
+     border: 3px solid var(--light-color);
+     border-radius: 50%;
+     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.13);
+     margin-bottom: 10px;
+}
+
+aside .profil-name {
+     color: var(--light-color);
+     justify-content: center;
+     text-align: center;
+     box-sizing: border-box;
+     padding: 0px 20px;
+     margin-top: 100px;
+}
+
+aside .profil-name p {
+     font-size: 12px;
+     font-weight: 300;
+     margin-bottom: 0px;
+}
+
+aside .profil-name h3 {
+     font-size: 16px;
+     margin-bottom: 2px;
+}
+
+/* MENU SIDEBAR */
+
+aside .menu {
+     margin: 40px 30px 60px 30px;
+}
+
+aside .menu a {
+     display: block;
+     line-height: 50px;
+     color: var(--light-color);
+     text-decoration: none;
+}
+
+aside .menu a:hover {
+     color: var(--secondary-color1);
+}
+
+aside .menu i {
+     width: 30px;
+     color: var(--secondary-color1);
+}
+
+aside .submenu {
+     margin-left: 15px;
+}
+
+/* MAIN CONTENT */
+
+main {
+     margin-top: 80px;
+     margin-left: 265px;
+     padding: 0px 40px 0px 40px;
+     min-height: 65vh;
+     transition: 0.5s;
+}
+
+.table-responsive {
+     padding-bottom: 10px;
+}
+
+/* tabel scrollbar */
+
+/* scrollbar size */
+.table-responsive::-webkit-scrollbar {
+     width: 8px;
+     height: 8px;
+}
+
+/* Track */
+.table-responsive::-webkit-scrollbar-track {
+     background: #eeeeee;
+     border-radius: 4px;
+}
+
+/* Handle */
+.table-responsive::-webkit-scrollbar-thumb {
+     background: var(--gradient-color2);
+     border-radius: 4px;
+}
+
+/* end table scrollbar */
+
+/* FOOTER */
+
+footer {
+     margin-left: 265px;
+     padding: 40px 40px 0px 40px;
+     transition: 0.5s;
+}
+
+/* MOBILE AND TABLET VERSION */
+
+@media (max-width: 991.98px) {
+
+     /* HUMBERGER MENU */
+     header label #sidebar_btn {
+          left: 20px;
+     }
+
+     #check:checked~aside {
+          left: 0;
+     }
+
+     #check:checked~main {
+          margin-left: 265px;
+     }
+
+     #check:checked~footer {
+          margin-left: 265px;
+     }
+
+     /* SIDEBAR */
+     aside {
+          left: -265px;
+     }
+
+     /* MAIN CONTENT */
+
+     main {
+          margin-left: 0px;
+     }
+
+     /* FOOTER */
+
+     footer {
+          margin-left: 0px;
+     }
+}
+
+@media (max-width: 575.98px) {
+     #check:checked~main {
+          margin-left: 0px;
+     }
+
+     #check:checked~footer {
+          margin-left: 0px;
+     }
+
+}
